@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Abdus Samad, PhD - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #0a0a0a 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 1000px;
+            animation: fadeIn 1s ease-in;
+            width: 100%;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -2px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 3rem;
+        }
+
+        .category {
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .category-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .category-title.research {
+            background: rgba(59, 130, 246, 0.2);
+            border-left: 4px solid #3b82f6;
+            color: #60a5fa;
+        }
+
+        .category-title.academic {
+            background: rgba(139, 92, 246, 0.2);
+            border-left: 4px solid #8b5cf6;
+            color: #a78bfa;
+        }
+
+        .category-title.tools {
+            background: rgba(16, 185, 129, 0.2);
+            border-left: 4px solid #10b981;
+            color: #34d399;
+        }
+
+        .category-title.parking {
+            background: rgba(245, 158, 11, 0.2);
+            border-left: 4px solid #f59e0b;
+            color: #fbbf24;
+        }
+
+        .category-title.emergency {
+            background: rgba(239, 68, 68, 0.2);
+            border-left: 4px solid #ef4444;
+            color: #f87171;
+        }
+
+        .category-title.living {
+            background: rgba(236, 72, 153, 0.2);
+            border-left: 4px solid #ec4899;
+            color: #f9a8d4;
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 1.5rem 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .links a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255,255,255,0.1);
+        }
+
+        .links.research a {
+            border-left: 3px solid #3b82f6;
+        }
+
+        .links.academic a {
+            border-left: 3px solid #8b5cf6;
+        }
+
+        .links.tools a {
+            border-left: 3px solid #10b981;
+        }
+
+        .links.parking a {
+            border-left: 3px solid #f59e0b;
+        }
+
+        .links.emergency a {
+            border-left: 3px solid #ef4444;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            .links {
+                grid-template-columns: 1fr;
+                padding: 0 1rem;
+            }
+
+            .links a {
+                padding: 1.2rem 1rem;
+            }
+
+            .category-title {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Md Abdus Samad, PhD</h1>
+        <h2>Scholar • Researcher • Educator</h2>
+        
+        <!-- Research & Personal Sites -->
+        <div class="category">
+            <div class="category-title research">🔬 Research & Personal</div>
+            <div style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 2;">
+                <a href="https://www.signalmindlab.org/" target="_blank" style="color: #60a5fa; text-decoration: none; transition: all 0.3s ease;">SignalMind Lab</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://www.drabdus.info" target="_blank" style="color: #60a5fa; text-decoration: none; transition: all 0.3s ease;">drabdus.info</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://www.drabdus.com" target="_blank" style="color: #60a5fa; text-decoration: none; transition: all 0.3s ease;">drabdus.com</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://www.scholarsnote.org/" target="_blank" style="color: #60a5fa; text-decoration: none; transition: all 0.3s ease;">Scholars Note</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://github.com/abdussamad" target="_blank" style="color: #60a5fa; text-decoration: none; transition: all 0.3s ease;">GitHub</a>
+            </div>
+        </div>
+
+        <!-- Academic Resources -->
+        <div class="category">
+            <div class="category-title academic">📚 Academic Resources</div>
+            <div style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 2;">
+                <a href="https://link.springer.com/journal/13040" target="_blank" style="color: #a78bfa; text-decoration: none; transition: all 0.3s ease;">BioData Mining</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://link.springer.com/journal/40537" target="_blank" style="color: #a78bfa; text-decoration: none; transition: all 0.3s ease;">Journal of Big Data</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://jcr.clarivate.com/" target="_blank" style="color: #a78bfa; text-decoration: none; transition: all 0.3s ease;">JCR Clarivate</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://mjl.clarivate.com/" target="_blank" style="color: #a78bfa; text-decoration: none; transition: all 0.3s ease;">MJL Clarivate</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://s2journal.bwise.kr/jcr/jcrCategoryRankingPage.do" target="_blank" style="color: #a78bfa; text-decoration: none; transition: all 0.3s ease;">JCR Category Ranking</a>
+            </div>
+        </div>
+
+        <!-- Productivity Tools -->
+        <div class="category">
+            <div class="category-title tools">🛠️ Productivity Tools</div>
+            
+            <!-- A: Writing & Document Tools -->
+            <h3 style="color: #34d399; margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.1rem;">A. Writing & Document Tools</h3>
+            <div style="font-size: 1.1rem; line-height: 2;">
+                <a href="https://yaytext.com/bold-italic/" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">YayText Bold Italic</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://www.turnitin.com/login_page.asp?lang=en_us" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">Turnitin</a>
+            </div>
+
+            <!-- B: Meeting & Appointment Scheduling -->
+            <h3 style="color: #34d399; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.1rem;">B. Meeting & Appointment Scheduling</h3>
+            <div style="font-size: 1.1rem; line-height: 2;">
+                <a href="https://calendly.com/" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">Calendly</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://cal.com/" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">Cal.com</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://www.zoom.com/products/appointment-scheduler/" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">Zoom Scheduler</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://savvycal.com/" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">SavvyCal</a>
+            </div>
+
+            <!-- C: AI-Powered Planning & Task Management -->
+            <h3 style="color: #34d399; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.1rem;">C. AI-Powered Planning & Task Management</h3>
+            <div style="font-size: 1.1rem; line-height: 2;">
+                <a href="https://www.usemotion.com/" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">Motion</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://www.sunsama.com/" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">Sunsama</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://reclaim.ai/" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">Reclaim.ai</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://www.morgen.so/" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">Morgen</a>
+            </div>
+        </div>
+
+        <!-- Living in Korea -->
+        <div class="category">
+            <div class="category-title" style="background: rgba(236, 72, 153, 0.2); border-left: 4px solid #ec4899; color: #f9a8d4;">🏡 Living in Korea</div>
+            <div style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 2;">
+                <a href="https://www.moyoplan.com/" target="_blank" style="color: #f9a8d4; text-decoration: none; transition: all 0.3s ease;">Moyoplan</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://www.msafer.or.kr/" target="_blank" style="color: #f9a8d4; text-decoration: none; transition: all 0.3s ease;">Korean MSafer</a>
+            </div>
+        </div>
+
+        <!-- Parking Services -->
+        <div class="category">
+            <div class="category-title parking">🚗 Parking Services (Korea)</div>
+            <div style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 2;">
+                <a href="http://parkingsms.wizshot.com/" target="_blank" style="color: #fbbf24; text-decoration: none; transition: all 0.3s ease;">Parking Enforcement Alert System</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="http://parking.seoul.go.kr" target="_blank" style="color: #fbbf24; text-decoration: none; transition: all 0.3s ease;">Seoul Parking Information</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://play.google.com/store/apps/details?id=kr.co.monoplatform.whistle" target="_blank" style="color: #fbbf24; text-decoration: none; transition: all 0.3s ease;">Whistle - Parking Violation Alert</a>
+            </div>
+        </div>
+
+        <!-- Emergency Contacts -->
+        <div class="category">
+            <div class="category-title emergency">🚨 Emergency Contacts (Korea)</div>
+            <div style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 2;">
+                <a href="https://www.rsokorea.org/emerg-phone-numbers.html" target="_blank" style="color: #f87171; text-decoration: none; transition: all 0.3s ease;">Korea Emergency Numbers List</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://www.gone2korea.com/emergency-contacts-korea/" target="_blank" style="color: #f87171; text-decoration: none; transition: all 0.3s ease;">Emergency Contacts for Foreigners</a>
+                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+                <a href="https://english.visitseoul.net/medical-emergencies" target="_blank" style="color: #f87171; text-decoration: none; transition: all 0.3s ease;">Seoul Medical Emergency Guide</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
