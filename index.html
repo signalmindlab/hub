@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md Abdus Samad, PhD - Portfolio</title>
+    <title>Md Abdus Samad, PhD</title>
     <style>
         * {
             margin: 0;
@@ -11,281 +11,312 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --bg-color: #fafafa;
+            --text-color: #1a1a1a;
+            --text-secondary: #666;
+            --text-tertiary: #999;
+            --border-color: #e5e5e5;
+            --link-hover: #0066cc;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #0a0a0a;
+            --text-color: #e5e5e5;
+            --text-secondary: #a0a0a0;
+            --text-tertiary: #666;
+            --border-color: #2a2a2a;
+            --link-hover: #4d9fff;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #0a0a0a 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            color: white;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 60px 20px;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
         .container {
-            text-align: center;
-            max-width: 1000px;
-            animation: fadeIn 1s ease-in;
-            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        header {
+            margin-bottom: 60px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 40px;
+            position: relative;
         }
 
         h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: -2px;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            opacity: 0.9;
-            margin-bottom: 3rem;
-        }
-
-        .category {
-            margin-top: 3rem;
-            margin-bottom: 2rem;
-        }
-
-        .category-title {
-            font-size: 1.2rem;
+            font-size: 2rem;
             font-weight: 600;
-            margin-bottom: 1.5rem;
-            padding: 0.8rem 1.5rem;
-            border-radius: 8px;
-            display: inline-block;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
         }
 
-        .category-title.research {
-            background: rgba(59, 130, 246, 0.2);
-            border-left: 4px solid #3b82f6;
-            color: #60a5fa;
+        .subtitle {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 400;
         }
 
-        .category-title.academic {
-            background: rgba(139, 92, 246, 0.2);
-            border-left: 4px solid #8b5cf6;
-            color: #a78bfa;
+        .section {
+            margin-bottom: 48px;
         }
 
-        .category-title.tools {
-            background: rgba(16, 185, 129, 0.2);
-            border-left: 4px solid #10b981;
-            color: #34d399;
-        }
-
-        .category-title.parking {
-            background: rgba(245, 158, 11, 0.2);
-            border-left: 4px solid #f59e0b;
-            color: #fbbf24;
-        }
-
-        .category-title.emergency {
-            background: rgba(239, 68, 68, 0.2);
-            border-left: 4px solid #ef4444;
-            color: #f87171;
-        }
-
-        .category-title.living {
-            background: rgba(236, 72, 153, 0.2);
-            border-left: 4px solid #ec4899;
-            color: #f9a8d4;
-        }
-
-        .links {
+        .section-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 48px;
         }
 
-        .links a {
-            color: white;
+        .section.single-column .section-content {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .section-title {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-tertiary);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .subsection {
+            margin-bottom: 32px;
+        }
+
+        .subsection-title {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .link-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .link-list a {
+            color: var(--text-color);
             text-decoration: none;
-            font-size: 1rem;
-            padding: 1.5rem 1.2rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+            padding: 10px 0;
+            transition: color 0.2s ease;
+            border-bottom: 1px solid transparent;
         }
 
-        .links a:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(255,255,255,0.1);
+        .link-list a:hover {
+            color: var(--link-hover);
         }
 
-        .links.research a {
-            border-left: 3px solid #3b82f6;
+        /* Inline style for Research & Personal section */
+        .inline-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            align-items: center;
         }
 
-        .links.academic a {
-            border-left: 3px solid #8b5cf6;
+        .inline-links a {
+            padding: 10px 0;
+            border-bottom: none;
         }
 
-        .links.tools a {
-            border-left: 3px solid #10b981;
+        .inline-links .separator {
+            margin: 0 8px;
+            color: var(--text-tertiary);
+            user-select: none;
         }
 
-        .links.parking a {
-            border-left: 3px solid #f59e0b;
+        .theme-toggle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: all 0.2s ease;
+            font-family: inherit;
         }
 
-        .links.emergency a {
-            border-left: 3px solid #ef4444;
+        .theme-toggle:hover {
+            border-color: var(--text-tertiary);
         }
 
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            h2 {
-                font-size: 1.2rem;
-            }
-
-            .links {
+        @media (max-width: 900px) {
+            .section-content {
                 grid-template-columns: 1fr;
-                padding: 0 1rem;
+                gap: 32px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 40px 20px;
             }
 
-            .links a {
-                padding: 1.2rem 1rem;
+            h1 {
+                font-size: 1.75rem;
             }
 
-            .category-title {
-                font-size: 0.85rem;
+            .subtitle {
+                font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Md Abdus Samad, PhD</h1>
-        <h2>Scholar • Researcher • Educator</h2>
-        
-        <!-- Research & Personal Sites -->
-        <div class="category">
-            <div class="category-title research">Research & Personal</div>
-            <div style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 2;">
-                <a href="https://www.signalmindlab.org/" target="_blank" style="color: #60a5fa; text-decoration: none; transition: all 0.3s ease;">SignalMind Lab</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="https://www.drabdus.info" target="_blank" style="color: #60a5fa; text-decoration: none; transition: all 0.3s ease;">drabdus.info</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="https://www.drabdus.com" target="_blank" style="color: #60a5fa; text-decoration: none; transition: all 0.3s ease;">drabdus.com</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="https://www.scholarsnote.org/" target="_blank" style="color: #60a5fa; text-decoration: none; transition: all 0.3s ease;">Scholars Note</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
+        <header>
+            <h1>Md Abdus Samad, PhD</h1>
+            <p class="subtitle">Scholar • Researcher • Educator</p>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <span class="theme-text">Dark</span>
+            </button>
+        </header>
+
+        <!-- Research & Personal -->
+        <section class="section single-column">
+            <h2 class="section-title">Research & Personal</h2>
+            <div class="section-content">
+                <div class="inline-links">
+                    <a href="https://www.signalmindlab.org/" target="_blank">SignalMind Lab</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.drabdus.info" target="_blank">drabdus.info</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.drabdus.com" target="_blank">drabdus.com</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.scholarsnote.org/" target="_blank">Scholars Note</a>
+                    <span class="separator">/</span>
+                    <a href="https://github.com/abdussamad" target="_blank">GitHub</a>
+                </div>
             </div>
-        </div>
+        </section>
 
         <!-- Academic Resources -->
-        <div class="category">
-            <div class="category-title academic">Academic Resources</div>
-            <div style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 2;">
-                <a href="https://link.springer.com/journal/13040" target="_blank" style="color: #a78bfa; text-decoration: none; transition: all 0.3s ease;">BioData Mining</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="https://link.springer.com/journal/40537" target="_blank" style="color: #a78bfa; text-decoration: none; transition: all 0.3s ease;">Journal of Big Data</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="https://jcr.clarivate.com/" target="_blank" style="color: #a78bfa; text-decoration: none; transition: all 0.3s ease;">JCR Clarivate</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="https://mjl.clarivate.com/" target="_blank" style="color: #a78bfa; text-decoration: none; transition: all 0.3s ease;">MJL Clarivate</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="https://s2journal.bwise.kr/jcr/jcrCategoryRankingPage.do" target="_blank" style="color: #a78bfa; text-decoration: none; transition: all 0.3s ease;">JCR Category Ranking</a>
+        <section class="section single-column">
+            <h2 class="section-title">Academic Resources</h2>
+            <div class="section-content">
+                <div class="inline-links">
+                    <a href="https://link.springer.com/journal/13040" target="_blank">BioData Mining</a>
+                    <span class="separator">/</span>
+                    <a href="https://link.springer.com/journal/40537" target="_blank">Journal of Big Data</a>
+                    <span class="separator">/</span>
+                    <a href="https://jcr.clarivate.com/" target="_blank">JCR Clarivate</a>
+                    <span class="separator">/</span>
+                    <a href="https://mjl.clarivate.com/" target="_blank">MJL Clarivate</a>
+                    <span class="separator">/</span>
+                    <a href="https://s2journal.bwise.kr/jcr/jcrCategoryRankingPage.do" target="_blank">JCR Category Ranking</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.msafer.or.kr/" target="_blank">Korean MSafer</a>
+                </div>
             </div>
-        </div>
+        </section>
 
         <!-- Productivity Tools -->
-        <div class="category">
-            <div class="category-title tools">Productivity Tools</div>
-            
-            <!-- A: Writing & Document Tools -->
-            <h3 style="color: #34d399; margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.1rem;">A. Writing & Document Tools</h3>
-            <div style="font-size: 1.1rem; line-height: 2;">
-                <a href="https://yaytext.com/bold-italic/" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">YayText Bold Italic</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="https://www.turnitin.com/login_page.asp?lang=en_us" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">Turnitin</a>
-            </div>
+        <section class="section">
+            <h2 class="section-title">Productivity Tools</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title">Writing & Documents</h3>
+                    <div class="inline-links">
+                        <a href="https://yaytext.com/bold-italic/" target="_blank">YayText Bold Italic</a>
+                        <span class="separator">/</span>
+                        <a href="https://www.turnitin.com/login_page.asp?lang=en_us" target="_blank">Turnitin</a>
+                    </div>
+                </div>
 
-            <!-- B: Meeting & Appointment Scheduling -->
-            <h3 style="color: #34d399; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.1rem;">B. Meeting & Appointment Scheduling</h3>
-            <div style="font-size: 1.1rem; line-height: 2;">
-                <a href="https://calendly.com/" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">Calendly</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="https://cal.com/" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">Cal.com</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="https://www.zoom.com/products/appointment-scheduler/" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">Zoom Scheduler</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="https://savvycal.com/" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">SavvyCal</a>
-            </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Scheduling</h3>
+                    <div class="inline-links">
+                        <a href="https://calendly.com/" target="_blank">Calendly</a>
+                        <span class="separator">/</span>
+                        <a href="https://cal.com/" target="_blank">Cal.com</a>
+                        <span class="separator">/</span>
+                        <a href="https://www.zoom.com/products/appointment-scheduler/" target="_blank">Zoom Scheduler</a>
+                        <span class="separator">/</span>
+                        <a href="https://savvycal.com/" target="_blank">SavvyCal</a>
+                    </div>
+                </div>
 
-            <!-- C: AI-Powered Planning & Task Management -->
-            <h3 style="color: #34d399; margin-top: 2rem; margin-bottom: 1rem; font-size: 1.1rem;">C. AI-Powered Planning & Task Management</h3>
-            <div style="font-size: 1.1rem; line-height: 2;">
-                <a href="https://www.usemotion.com/" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">Motion</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="https://www.sunsama.com/" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">Sunsama</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="https://reclaim.ai/" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">Reclaim.ai</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="https://www.morgen.so/" target="_blank" style="color: #34d399; text-decoration: none; transition: all 0.3s ease;">Morgen</a>
+                <div class="subsection">
+                    <h3 class="subsection-title">AI Planning & Tasks</h3>
+                    <div class="inline-links">
+                        <a href="https://www.moyoplan.com/" target="_blank">Moyoplan</a>
+                        <span class="separator">/</span>
+                        <a href="https://www.usemotion.com/" target="_blank">Motion</a>
+                        <span class="separator">/</span>
+                        <a href="https://www.sunsama.com/" target="_blank">Sunsama</a>
+                        <span class="separator">/</span>
+                        <a href="https://reclaim.ai/" target="_blank">Reclaim.ai</a>
+                        <span class="separator">/</span>
+                        <a href="https://www.morgen.so/" target="_blank">Morgen</a>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
         <!-- Living in Korea -->
-        <div class="category">
-            <div class="category-title" style="background: rgba(236, 72, 153, 0.2); border-left: 4px solid #ec4899; color: #f9a8d4;">🏡 Living in Korea</div>
-            <div style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 2;">
-                <a href="https://www.moyoplan.com/" target="_blank" style="color: #f9a8d4; text-decoration: none; transition: all 0.3s ease;">Moyoplan</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="https://www.msafer.or.kr/" target="_blank" style="color: #f9a8d4; text-decoration: none; transition: all 0.3s ease;">Korean MSafer</a>
-            </div>
-        </div>
+        <section class="section">
+            <h2 class="section-title">Living in Korea</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title">Parking</h3>
+                    <div class="inline-links">
+                        <a href="http://parkingsms.wizshot.com/" target="_blank">Parking Enforcement Alert</a>
+                        <span class="separator">/</span>
+                        <a href="http://parking.seoul.go.kr" target="_blank">Seoul Parking Info</a>
+                        <span class="separator">/</span>
+                        <a href="https://play.google.com/store/apps/details?id=kr.co.monoplatform.whistle" target="_blank">Whistle App</a>
+                    </div>
+                </div>
 
-        <!-- Parking Services -->
-        <div class="category">
-            <div class="category-title parking">Parking Services (Korea)</div>
-            <div style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 2;">
-                <a href="http://parkingsms.wizshot.com/" target="_blank" style="color: #fbbf24; text-decoration: none; transition: all 0.3s ease;">Parking Enforcement Alert System</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="http://parking.seoul.go.kr" target="_blank" style="color: #fbbf24; text-decoration: none; transition: all 0.3s ease;">Seoul Parking Information</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="https://play.google.com/store/apps/details?id=kr.co.monoplatform.whistle" target="_blank" style="color: #fbbf24; text-decoration: none; transition: all 0.3s ease;">Whistle - Parking Violation Alert</a>
+                <div class="subsection">
+                    <h3 class="subsection-title">Emergency</h3>
+                    <div class="inline-links">
+                        <a href="https://www.rsokorea.org/emerg-phone-numbers.html" target="_blank">Emergency Numbers</a>
+                        <span class="separator">/</span>
+                        <a href="https://www.gone2korea.com/emergency-contacts-korea/" target="_blank">Foreigner Contacts</a>
+                        <span class="separator">/</span>
+                        <a href="https://english.visitseoul.net/medical-emergencies" target="_blank">Medical Emergency Guide</a>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <!-- Emergency Contacts -->
-        <div class="category">
-            <div class="category-title emergency">Emergency Contacts (Korea)</div>
-            <div style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 2;">
-                <a href="https://www.rsokorea.org/emerg-phone-numbers.html" target="_blank" style="color: #f87171; text-decoration: none; transition: all 0.3s ease;">Korea Emergency Numbers List</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="https://www.gone2korea.com/emergency-contacts-korea/" target="_blank" style="color: #f87171; text-decoration: none; transition: all 0.3s ease;">Emergency Contacts for Foreigners</a>
-                <span style="color: rgba(255,255,255,0.5); margin: 0 0.5rem;">/</span>
-                <a href="https://english.visitseoul.net/medical-emergencies" target="_blank" style="color: #f87171; text-decoration: none; transition: all 0.3s ease;">Seoul Medical Emergency Guide</a>
-            </div>
-        </div>
+        </section>
     </div>
+
+    <script>
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        updateThemeText(currentTheme);
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeText(newTheme);
+        }
+
+        function updateThemeText(theme) {
+            const themeText = document.querySelector('.theme-text');
+            themeText.textContent = theme === 'dark' ? 'Light' : 'Dark';
+        }
+    </script>
 </body>
 </html>
