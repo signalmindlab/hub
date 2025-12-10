@@ -158,6 +158,59 @@
             border-color: var(--text-tertiary);
         }
 
+        .digital-clock {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-weight: 500;
+            color: var(--text-color);
+            font-family: 'Courier New', monospace;
+            background: var(--bg-color);
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            line-height: 1.5;
+        }
+
+        .clock-time {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .clock-date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        .clock-utc {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            margin-top: 2px;
+        }
+
+        @media (max-width: 640px) {
+            .digital-clock {
+                padding: 8px 12px;
+                top: 10px;
+                left: 10px;
+            }
+            
+            .clock-time {
+                font-size: 0.9rem;
+            }
+            
+            .clock-date {
+                font-size: 0.75rem;
+            }
+            
+            .clock-utc {
+                font-size: 0.65rem;
+            }
+        }
+
         @media (max-width: 900px) {
             .section-content {
                 grid-template-columns: 1fr;
@@ -181,6 +234,8 @@
     </style>
 </head>
 <body>
+    <div class="digital-clock" id="digitalClock"></div>
+    
     <div class="container">
         <header>
             <h1>Md Abdus Samad, PhD</h1>
@@ -297,108 +352,31 @@
             <h2 class="section-title">Yeungnam University</h2>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title">Main & Portal</h3>
+                    <h3 class="subsection-title">Main University Sites</h3>
                     <div class="inline-links">
-                        <a href="https://www.yu.ac.kr/main/index.do" target="_blank">YU Main</a>
+                        <a href="https://www.yu.ac.kr/english/index.do" target="_blank">YU English</a>
                         <span class="separator">/</span>
-                        <a href="https://www.yu.ac.kr/eng/index.do" target="_blank">YU English</a>
+                        <a href="https://yu.ac.kr/" target="_blank">YU Main</a>
                         <span class="separator">/</span>
-                        <a href="https://portal.yu.ac.kr/" target="_blank">YU Portal</a>
-                        <span class="separator">/</span>
-                        <a href="https://lms.yu.ac.kr/" target="_blank">LMS</a>
+                        <a href="http://homep.yu.ac.kr/en/main/index.php" target="_blank">YU Homepage</a>
                     </div>
                 </div>
 
                 <div class="subsection">
-                    <h3 class="subsection-title">Library & IT Services</h3>
+                    <h3 class="subsection-title">International Services</h3>
                     <div class="inline-links">
-                        <a href="https://library.yu.ac.kr/" target="_blank">Central Library</a>
+                        <a href="https://www.yu.ac.kr/ic/index.do" target="_blank">Office of International Affairs</a>
                         <span class="separator">/</span>
-                        <a href="https://webmail.yu.ac.kr/" target="_blank">Webmail</a>
+                        <a href="https://www.yu.ac.kr/isen/intro/location.do" target="_blank">International Student Support</a>
                         <span class="separator">/</span>
-                        <a href="https://cms.yu.ac.kr/" target="_blank">CMS</a>
-                        <span class="separator">/</span>
-                        <a href="https://print.yu.ac.kr/" target="_blank">Print Service</a>
+                        <a href="https://www.yu.ac.kr/ic/exchange/en-courses.do" target="_blank">Courses in English</a>
                     </div>
                 </div>
 
                 <div class="subsection">
-                    <h3 class="subsection-title">Student Services</h3>
+                    <h3 class="subsection-title">Medical Center</h3>
                     <div class="inline-links">
-                        <a href="https://dorm.yu.ac.kr/" target="_blank">Dormitory</a>
-                        <span class="separator">/</span>
-                        <a href="https://health.yu.ac.kr/" target="_blank">Health Center</a>
-                        <span class="separator">/</span>
-                        <a href="https://counsel.yu.ac.kr/" target="_blank">Counseling Center</a>
-                        <span class="separator">/</span>
-                        <a href="https://job.yu.ac.kr/" target="_blank">Career Development</a>
-                        <span class="separator">/</span>
-                        <a href="https://welfare.yu.ac.kr/" target="_blank">Student Welfare</a>
-                    </div>
-                </div>
-
-                <div class="subsection">
-                    <h3 class="subsection-title">International & Exchange</h3>
-                    <div class="inline-links">
-                        <a href="https://oia.yu.ac.kr/" target="_blank">International Affairs</a>
-                        <span class="separator">/</span>
-                        <a href="https://language.yu.ac.kr/" target="_blank">Language Center</a>
-                        <span class="separator">/</span>
-                        <a href="https://exchange.yu.ac.kr/" target="_blank">Exchange Programs</a>
-                    </div>
-                </div>
-
-                <div class="subsection">
-                    <h3 class="subsection-title">Sports & Recreation</h3>
-                    <div class="inline-links">
-                        <a href="https://sports.yu.ac.kr/" target="_blank">Sports Center</a>
-                        <span class="separator">/</span>
-                        <a href="https://pool.yu.ac.kr/" target="_blank">Swimming Pool</a>
-                        <span class="separator">/</span>
-                        <a href="https://fitness.yu.ac.kr/" target="_blank">Fitness Center</a>
-                        <span class="separator">/</span>
-                        <a href="https://stadium.yu.ac.kr/" target="_blank">Stadium</a>
-                    </div>
-                </div>
-
-                <div class="subsection">
-                    <h3 class="subsection-title">Administrative Services</h3>
-                    <div class="inline-links">
-                        <a href="https://hr.yu.ac.kr/" target="_blank">Human Resources</a>
-                        <span class="separator">/</span>
-                        <a href="https://finance.yu.ac.kr/" target="_blank">Finance</a>
-                        <span class="separator">/</span>
-                        <a href="https://facility.yu.ac.kr/" target="_blank">Facility Management</a>
-                        <span class="separator">/</span>
-                        <a href="https://safety.yu.ac.kr/" target="_blank">Safety Management</a>
-                        <span class="separator">/</span>
-                        <a href="https://parking.yu.ac.kr/" target="_blank">Parking</a>
-                    </div>
-                </div>
-
-                <div class="subsection">
-                    <h3 class="subsection-title">Campus Life</h3>
-                    <div class="inline-links">
-                        <a href="https://cafeteria.yu.ac.kr/" target="_blank">Cafeteria</a>
-                        <span class="separator">/</span>
-                        <a href="https://coop.yu.ac.kr/" target="_blank">Co-op Store</a>
-                        <span class="separator">/</span>
-                        <a href="https://bank.yu.ac.kr/" target="_blank">Campus Bank</a>
-                        <span class="separator">/</span>
-                        <a href="https://post.yu.ac.kr/" target="_blank">Post Office</a>
-                        <span class="separator">/</span>
-                        <a href="https://bookstore.yu.ac.kr/" target="_blank">Bookstore</a>
-                    </div>
-                </div>
-
-                <div class="subsection">
-                    <h3 class="subsection-title">Medical & Hospital</h3>
-                    <div class="inline-links">
-                        <a href="https://www.yumc.ac.kr/english/" target="_blank">YU Medical Center</a>
-                        <span class="separator">/</span>
-                        <a href="https://dental.yumc.ac.kr/" target="_blank">Dental Hospital</a>
-                        <span class="separator">/</span>
-                        <a href="https://pharmacy.yu.ac.kr/" target="_blank">Pharmacy</a>
+                        <a href="https://www.yumc.ac.kr/english/" target="_blank">Yeungnam University Medical Center</a>
                     </div>
                 </div>
             </div>
@@ -445,6 +423,177 @@
             </div>
         </section>
 
+        <!-- World Time -->
+        <section class="section single-column">
+            <h2 class="section-title">World Time</h2>
+            <div class="section-content">
+                <div class="inline-links">
+                    <a href="https://www.timeanddate.com/worldclock/" target="_blank">Time and Date</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.worldtimebuddy.com/" target="_blank">World Time Buddy</a>
+                    <span class="separator">/</span>
+                    <a href="https://time.is/" target="_blank">Time.is</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.worldtimeserver.com/" target="_blank">World Time Server</a>
+                    <span class="separator">/</span>
+                    <a href="https://everytimezone.com/" target="_blank">Every Time Zone</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.zeitverschiebung.net/en/" target="_blank">Time Zone Converter</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.thetimezoneconverter.com/" target="_blank">The Time Zone Converter</a>
+                    <span class="separator">/</span>
+                    <a href="https://savvytime.com/" target="_blank">Savvy Time</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.24timezones.com/" target="_blank">24 Time Zones</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.timezonewizard.com/" target="_blank">Time Zone Wizard</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.webclock.net/" target="_blank">Web Clock</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.onlineclock.net/" target="_blank">Online Clock</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.clocktab.com/" target="_blank">Clock Tab</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.online-stopwatch.com/full-screen-clock/" target="_blank">Full Screen Clock</a>
+                    <span class="separator">/</span>
+                    <a href="https://vclock.com/" target="_blank">vClock</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.timebie.com/std/worldclock.php" target="_blank">Timebie World Clock</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.clock.zone/" target="_blank">Clock Zone</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.fliqlo.com/" target="_blank">Fliqlo Screensaver</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Tools -->
+        <section class="section">
+            <h2 class="section-title">AI Tools</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title">Conversational AI</h3>
+                    <div class="inline-links">
+                        <a href="https://claude.ai/" target="_blank">Claude</a>
+                        <span class="separator">/</span>
+                        <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>
+                        <span class="separator">/</span>
+                        <a href="https://gemini.google.com/" target="_blank">Google Gemini</a>
+                        <span class="separator">/</span>
+                        <a href="https://copilot.microsoft.com/" target="_blank">Microsoft Copilot</a>
+                        <span class="separator">/</span>
+                        <a href="https://www.perplexity.ai/" target="_blank">Perplexity AI</a>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">Image Generation</h3>
+                    <div class="inline-links">
+                        <a href="https://www.midjourney.com/" target="_blank">Midjourney</a>
+                        <span class="separator">/</span>
+                        <a href="https://openai.com/dall-e-3" target="_blank">DALL-E</a>
+                        <span class="separator">/</span>
+                        <a href="https://stability.ai/" target="_blank">Stable Diffusion</a>
+                        <span class="separator">/</span>
+                        <a href="https://www.adobe.com/products/firefly.html" target="_blank">Adobe Firefly</a>
+                        <span class="separator">/</span>
+                        <a href="https://ideogram.ai/" target="_blank">Ideogram</a>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">Research & Writing</h3>
+                    <div class="inline-links">
+                        <a href="https://www.notion.ai/" target="_blank">Notion AI</a>
+                        <span class="separator">/</span>
+                        <a href="https://www.grammarly.com/" target="_blank">Grammarly</a>
+                        <span class="separator">/</span>
+                        <a href="https://www.jasper.ai/" target="_blank">Jasper</a>
+                        <span class="separator">/</span>
+                        <a href="https://quillbot.com/" target="_blank">QuillBot</a>
+                        <span class="separator">/</span>
+                        <a href="https://www.copy.ai/" target="_blank">Copy.ai</a>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">Code & Development</h3>
+                    <div class="inline-links">
+                        <a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a>
+                        <span class="separator">/</span>
+                        <a href="https://www.cursor.com/" target="_blank">Cursor</a>
+                        <span class="separator">/</span>
+                        <a href="https://www.tabnine.com/" target="_blank">Tabnine</a>
+                        <span class="separator">/</span>
+                        <a href="https://codeium.com/" target="_blank">Codeium</a>
+                        <span class="separator">/</span>
+                        <a href="https://replit.com/" target="_blank">Replit AI</a>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h3 class="subsection-title">Productivity & Automation</h3>
+                    <div class="inline-links">
+                        <a href="https://zapier.com/ai" target="_blank">Zapier AI</a>
+                        <span class="separator">/</span>
+                        <a href="https://www.make.com/" target="_blank">Make (Integromat)</a>
+                        <span class="separator">/</span>
+                        <a href="https://otter.ai/" target="_blank">Otter.ai</a>
+                        <span class="separator">/</span>
+                        <a href="https://fireflies.ai/" target="_blank">Fireflies.ai</a>
+                        <span class="separator">/</span>
+                        <a href="https://www.beautiful.ai/" target="_blank">Beautiful.ai</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <section class="section single-column">
+            <h2 class="section-title">Navigation</h2>
+            <div class="section-content">
+                <div class="inline-links">
+                    <a href="https://map.naver.com/" target="_blank">Naver Map</a>
+                    <span class="separator">/</span>
+                    <a href="https://map.kakao.com/" target="_blank">Kakao Map</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.google.com/maps" target="_blank">Google Maps</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weather -->
+        <section class="section single-column">
+            <h2 class="section-title">Weather</h2>
+            <div class="section-content">
+                <div class="inline-links">
+                    <a href="https://weather.com/" target="_blank">Weather.com</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.accuweather.com/" target="_blank">AccuWeather</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.weatherbug.com/" target="_blank">WeatherBug</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.weather.gov/" target="_blank">NOAA Weather</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.windy.com/" target="_blank">Windy</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.wunderground.com/" target="_blank">Weather Underground</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.ventusky.com/" target="_blank">Ventusky</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.weather.go.kr/w/index.do" target="_blank">Korea Meteorological Administration</a>
+                    <span class="separator">/</span>
+                    <a href="https://weather.naver.com/" target="_blank">Naver Weather</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.timeanddate.com/weather/" target="_blank">Time and Date Weather</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.yr.no/" target="_blank">Yr.no</a>
+                    <span class="separator">/</span>
+                    <a href="https://www.metoffice.gov.uk/" target="_blank">Met Office UK</a>
+                </div>
+            </div>
+        </section>
+
         <!-- Living in Korea -->
         <section class="section">
             <h2 class="section-title">Living in Korea</h2>
@@ -455,37 +604,6 @@
                         <a href="https://www.msafer.or.kr/" target="_blank">Korean MSafer</a>
                         <span class="separator">/</span>
                         <a href="https://www.moyoplan.com/" target="_blank">Moyoplan</a>
-                    </div>
-                </div>
-
-                <div class="subsection">
-                    <h3 class="subsection-title">Gyeongsan City Government</h3>
-                    <div class="inline-links">
-                        <a href="https://www.gb.go.kr/Main/open_content/en/index.html" target="_blank">Gyeongsangbuk-do Province</a>
-                        <span class="separator">/</span>
-                        <a href="https://www.hikorea.go.kr/Main.pt" target="_blank">HiKorea Immigration</a>
-                        <span class="separator">/</span>
-                        <a href="https://www.nhis.or.kr/english/index.do" target="_blank">National Health Insurance</a>
-                        <span class="separator">/</span>
-                        <a href="https://www.nps.or.kr/jsppage/english/main.jsp" target="_blank">National Pension Service</a>
-                    </div>
-                </div>
-
-                <div class="subsection">
-                    <h3 class="subsection-title">Hospitals in Gyeongsan</h3>
-                    <div class="inline-links">
-                        <a href="https://www.dsmc.or.kr/english/main/index.do" target="_blank">Daegu Catholic University Medical Center</a>
-                        <span class="separator">/</span>
-                        <a href="https://www.dh.or.kr/eng/main.do" target="_blank">Daegu Fatima Hospital</a>
-                        <span class="separator">/</span>
-                        <a href="https://www.yumc.ac.kr/english/" target="_blank">Yeungnam University Medical Center</a>
-                    </div>
-                </div>
-
-                <div class="subsection">
-                    <h3 class="subsection-title">Recreation</h3>
-                    <div class="inline-links">
-                        <a href="https://www.foresttrip.go.kr/indvz/main.do?hmpgId=0262" target="_blank">Gyeongsan Natural Recreation Forest</a>
                     </div>
                 </div>
 
@@ -534,6 +652,40 @@
             const themeText = document.querySelector('.theme-text');
             themeText.textContent = theme === 'dark' ? 'Light' : 'Dark';
         }
+
+        // Digital Clock
+        function updateClock() {
+            const now = new Date();
+            
+            // UTC+9 time with seconds (bold)
+            const koreaTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Seoul' }));
+            const kstHours = String(koreaTime.getHours()).padStart(2, '0');
+            const kstMinutes = String(koreaTime.getMinutes()).padStart(2, '0');
+            const kstSeconds = String(koreaTime.getSeconds()).padStart(2, '0');
+            const timeString = `${kstHours}:${kstMinutes}:${kstSeconds}`;
+            
+            // Day and Date (first 3 letters of day)
+            const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const dayName = days[koreaTime.getDay()];
+            const monthName = months[koreaTime.getMonth()];
+            const date = koreaTime.getDate();
+            const year = koreaTime.getFullYear();
+            const dateString = `${dayName}, ${monthName} ${date}, ${year}`;
+            
+            // UTC+9 label (without time)
+            const utcString = `UTC+9`;
+            
+            document.getElementById('digitalClock').innerHTML = `
+                <div class="clock-time">${timeString}</div>
+                <div class="clock-date">${dateString}</div>
+                <div class="clock-utc">${utcString}</div>
+            `;
+        }
+
+        // Update clock immediately and then every second
+        updateClock();
+        setInterval(updateClock, 1000);
     </script>
 </body>
 </html>
